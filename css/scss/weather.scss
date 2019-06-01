@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+$font-stack: 'Inconsolata', monospace;
+
+$colors: (
+  blue: #add8e6,
+  white: #fff,
+);
+
+@function returnColor($chosenColor) {
+  @return map-get($colors, $chosenColor);
+}
+
+
+body, html {
+  margin: 0;
+  background-color: returnColor(blue);
+}
+
+.weather {
+  color: returnColor(white);
+  font-family: $font-stack;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .inputField {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    input[type=text] {
+      width: 30%;
+      font-size: 1.2em;
+      font-family: $font-stack;
+    }
+    button {
+      background: none;
+      border: none;
+      font-family: $font-stack;
+      color: returnColor(white);
+      font-size: 1.2em;
+      background-color: darken(returnColor(blue), 10%);
+      border-radius: 5px;
+      margin: 5px;
+    }
+  }
+}
+
+.weatherContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;
+  font-family: $font-stack;
+  color: blue;
+
+  @media (max-width: 600px) {
+/*desktop first*/
+  display: flex;
+  flex-direction: column;
+}
+
+  .cityDiv {
+    text-align: center;
+  }
+}

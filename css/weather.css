@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+body, html {
+  margin: 0;
+  background-color: #add8e6; }
+
+.weather {
+  color: #fff;
+  font-family: "Inconsolata", monospace;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .weather .inputField {
+    width: 100vw;
+    display: flex;
+    justify-content: center; }
+    .weather .inputField input[type=text] {
+      width: 30%;
+      font-size: 1.2em;
+      font-family: "Inconsolata", monospace; }
+    .weather .inputField button {
+      background: none;
+      border: none;
+      font-family: "Inconsolata", monospace;
+      color: #fff;
+      font-size: 1.2em;
+      background-color: #86c5da;
+      border-radius: 5px;
+      margin: 5px; }
+
+.weatherContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;
+  font-family: "Inconsolata", monospace;
+  color: blue; }
+  @media (max-width: 600px) {
+    .weatherContainer {
+      /*desktop first*/
+      display: flex;
+      flex-direction: column; } }
+  .weatherContainer .cityDiv {
+    text-align: center; }
+
+/*# sourceMappingURL=weather.css.map */
