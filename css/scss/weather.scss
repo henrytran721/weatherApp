@@ -4,6 +4,8 @@ $font-stack: 'Inconsolata', monospace;
 $colors: (
   blue: #add8e6,
   white: #fff,
+  navy: #000080,
+  red: #ff6961,
 );
 
 @function returnColor($chosenColor) {
@@ -48,17 +50,40 @@ body, html {
 .weatherContainer {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 5%;
   font-family: $font-stack;
-  color: blue;
+  color: navy;
 
   @media (max-width: 600px) {
 /*desktop first*/
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
   .cityDiv {
+    width: 33%;
+    margin-top: 5%;
+    border: 10px solid navy;
+    border-radius: 5px;
     text-align: center;
+    background-color: returnColor(white);
+    position: relative;
+
+    @media (max-width: 600px) {
+  /*desktop first*/
+    align-self: center;
+    margin-top: 5%;
+  }
+    .deleteBtn {
+      background: none;
+      border: none;
+      color: returnColor(red);
+      font-size: 1.2em;
+      position: absolute;
+      top: 0;
+      right: 2%;
+    }
   }
 }

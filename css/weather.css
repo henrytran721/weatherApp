@@ -30,15 +30,36 @@ body, html {
 .weatherContainer {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 5%;
   font-family: "Inconsolata", monospace;
-  color: blue; }
+  color: navy; }
   @media (max-width: 600px) {
     .weatherContainer {
       /*desktop first*/
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column;
+      justify-content: center; } }
   .weatherContainer .cityDiv {
-    text-align: center; }
+    width: 33%;
+    margin-top: 5%;
+    border: 10px solid navy;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    position: relative; }
+    @media (max-width: 600px) {
+      .weatherContainer .cityDiv {
+        /*desktop first*/
+        align-self: center;
+        margin-top: 5%; } }
+    .weatherContainer .cityDiv .deleteBtn {
+      background: none;
+      border: none;
+      color: #ff6961;
+      font-size: 1.2em;
+      position: absolute;
+      top: 0;
+      right: 2%; }
 
 /*# sourceMappingURL=weather.css.map */
